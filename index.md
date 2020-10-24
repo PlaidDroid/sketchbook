@@ -1,2 +1,2 @@
 ## Projects:
-   * [Beautiful Eyes] (beautiful-eyes/index.html)
+   * [Beautiful Eyes](beautiful-eyes/index.html)

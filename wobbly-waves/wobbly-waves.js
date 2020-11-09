@@ -1,4 +1,4 @@
-let widgetColor;
+let widgetColor = 20
 let widgetStrokeWeight = 2;
 
 let rate = 0;
@@ -8,7 +8,6 @@ function setup() {
 	createCanvas(windowWidth, windowHeight);
 	background(0);
 	smooth();
-	widgetColor = 20;
 }
 
 function draw() {

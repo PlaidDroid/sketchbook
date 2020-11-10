@@ -6,8 +6,8 @@ let speed = 10;
 let bgm;
 
 function preload(){
-  soundFormats('wav');
-  bgm = loadSound('assets/wind-howling.wav');
+  soundFormats('mp3', 'ogg');
+  bgm = loadSound('assets/wind-howling.mp3');
 }
 
 function setup() {

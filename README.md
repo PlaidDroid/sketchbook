@@ -3,3 +3,4 @@
 * [Wobbly Waves](wobbly-waves)
 * [Starfield](star-field)
 * [Maurer Rose](maurer-rose)
+* [Snake Sim](snake-sim)

@@ -6,8 +6,8 @@ let speed = 10;
 let bgm;
 
 function preload(){
-  soundFormats('mp3', 'ogg');
-  bgm = loadSound('assets/wind-howling.mp3');
+  soundFormats('wav', 'mp3', 'ogg');
+  bgm = loadSound('assets/wind-howling');
 }
 
 function setup() {
@@ -27,23 +27,4 @@ function draw() {
     stars[i].update();
     stars[i].show();
   }
-}
-
-function keyPressed(){
-	switch(keyCode){
-		case UP_ARROW:
-			if(speed != topSpeed){
-				// clear();
-				// background(0);
-				speed += 5;
-			}
-		break;
-		case DOWN_ARROW:
-			if(speed != minSpeed){
-				// clear();
-				// background(0);
-				speed -= 5;
-			}
-		break;
-	}
 }

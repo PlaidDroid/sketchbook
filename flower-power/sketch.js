@@ -10,14 +10,14 @@ var countMax = 1000;
 
 var flowerSize = 50;
 var flowerSizeMin = 15;
-var flowerSizeMax = 150;
+var flowerSizeMax;
 
 var petals = 10;
-var petalsMin = 1;
+var petalsMin = 0;
 var petalsMax = 50;
 
 var stalkLength = 50;
-var stalkLengthMin = 30;
+var stalkLengthMin = 0;
 var stalkLengthMax;
 
 var stalkWidth = 5;
@@ -28,6 +28,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   smooth();
   seed = random(seedMin, seedMax);
+  flowerSizeMax = width/2;
   stalkLength = height;
   stalkLengthMax = height;
   gui = createGui('flower power');
@@ -54,17 +55,20 @@ function flower(a, b) {
   let i, x, y;
 
   // petals
-  for (i = 0; i < TWO_PI; i += t) {
-    x = r * cos(i);
-    y = r * sin(i);
-    circle(x, y, r);
+  if (petals > 0) {
+    for (i = 0; i < TWO_PI; i += t) {
+      x = r * cos(i);
+      y = r * sin(i);
+      circle(x, y, r);
+    }
   }
 
   // stalk
   fill('#005702');
-  x = r * cos(i);
-  y = r * sin(i);
-  rect(x, y - stalkWidth / 2, stalkLength, stalkWidth);
+  // x = r * cos(i);
+  // y = r * sin(i);
+  // rect(x, y - stalkWidth / 2, stalkLength, stalkWidth);
+  rect(0, 0 - stalkWidth / 2, stalkLength, stalkWidth);
 
   // center
   fill('#BE9A30');
